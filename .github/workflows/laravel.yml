@@ -39,3 +39,11 @@ jobs:
       - name: deploy
         if: steps.resultTest.outcome == 'success'
         run: ls
+
+      - name: Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: |
+            composer.json
+            #storage/logs/laravel.log
