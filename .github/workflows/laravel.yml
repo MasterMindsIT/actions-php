@@ -22,5 +22,5 @@ jobs:
           php-version: 8.2
           extentions: mbstring, bcmath, pdo, pdo_mysql
       - name: Install dependencies
-        run: composer install --no--interaction
+        run: composer install --no-interaction
     
