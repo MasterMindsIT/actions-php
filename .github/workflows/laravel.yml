@@ -33,5 +33,9 @@ jobs:
         run: php artisan key:generate
 
       - name: Run Test Laravel
+        id: resultTest
         run: vendor/bin/phpunit
     
+      - name: deploy
+        if: steps.resultTest.outcome == 'success'
+        run: ls
